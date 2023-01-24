@@ -1,7 +1,5 @@
 import Head from "next/head";
-import { Permanent_Marker } from "@next/font/google";
 import Link from "next/link";
-const marker = Permanent_Marker({ weight: "400", subsets: ["latin"] });
 
 export default function Layout({
   children,
@@ -19,9 +17,7 @@ export default function Layout({
         <header className="pt-6 mb-6 sm:mb-10 sm:pt-10">
           <div className="flex items-center justify-between">
             <h1 className="text-4xl font-bold sm:text-6xl">
-              <Link className={marker.className} href="/">
-                {header}
-              </Link>
+              <Link href="/">{header}</Link>
             </h1>
             <div className="flex items-center gap-6 text-xl md:gap-16 md:text-4xl">
               <Link href="about" className="hidden sm:inline-block">
